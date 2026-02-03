@@ -43,8 +43,8 @@ function WebTabsLayout() {
       <WebTabs.Screen
         name="index"
         options={{
-          title: "Home",
-          tabBarIcon: (props) => <MaterialIcons {...props} name="home" />,
+          title: "Coffee Beans",
+          tabBarIcon: (props) => <MaterialIcons {...props} name="local-cafe" />,
         }}
       />
       <WebTabs.Screen
@@ -62,12 +62,12 @@ function NativeTabsLayout() {
   return (
     <NativeTabs>
       <NativeTabs.Trigger name="index">
-        <NativeTabs.Trigger.Label>Home</NativeTabs.Trigger.Label>
+        <NativeTabs.Trigger.Label>Coffee Beans</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon
           {...Platform.select({
-            ios: { sf: { default: "house", selected: "house.fill" } },
+            ios: { sf: { default: "mug", selected: "mug.fill" } },
             default: {
-              src: <NativeTabs.Trigger.VectorIcon family={MaterialIcons} name="home" />,
+              src: <NativeTabs.Trigger.VectorIcon family={MaterialIcons} name="local-cafe" />,
             },
           })}
         />
@@ -76,7 +76,7 @@ function NativeTabsLayout() {
         <NativeTabs.Trigger.Label>Info</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon
           {...Platform.select({
-            ios: { sf: "cursorarrow.rays" },
+            ios: { sf: "info.circle" },
             default: {
               src: <NativeTabs.Trigger.VectorIcon family={MaterialIcons} name="info" />,
             },
